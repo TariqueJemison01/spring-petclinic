@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Generate Code Coverage') {
             steps {
-                sh 'mvn jacoco:prepare-agent test jacoco:report'
+                bat 'mvn jacoco:prepare-agent test jacoco:report'
             }
             post {
                 always {
